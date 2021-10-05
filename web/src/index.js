@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Item from './components/Item';
+import TodoItems from './TodoItems';
 import './styles.css';
 
 class App extends React.Component{
@@ -15,13 +17,8 @@ class App extends React.Component{
 
     <div className="bevel">
     <ul>
-      <li className="item"> <input type="checkbox" /> Introduction</li>
-      <li className="item"> <input type="checkbox" /> Create Components</li>
-      <li className="item"> <input type="checkbox" /> Summary</li>
-      <li className="item"> <input type="checkbox" /> Cloning from git</li>
-      <li className="item"> <input type="checkbox" /> Adding Functionality</li>
-      <li className="item"> <input type="checkbox" /> Pushing</li>
-      <li className="item"> <input type="checkbox" /> Summary/Next meeeting</li>
+
+      {[...TodoItems].map(item=><Item name={item.name} class="item" />)}
     </ul>
     </div>
     </React.Fragment>
