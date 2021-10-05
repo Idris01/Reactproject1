@@ -52,6 +52,8 @@ align-items: center;
 margin-top: 20px;
 margin-left: 5px;
 border-left:4px double rgb(7, 75, 27);
+text-transform: capitalize;
+white-space:nowrap
 
 
 
